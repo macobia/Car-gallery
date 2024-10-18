@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script>
+        alert("Welcome to Javascript");
+        document.write("Welcome to Js")
+
+        console.log("Welcome to Js");
+        let x = 5;
+
+        if (x = 4) {
+           let  y = 8*9-x;
+
+           console.log(y);
+        };
+        // console.log(x)
+
+        // window.location.href = 'https://www.google.com'
+      
+
+        // to get the browser window's width and height 
+      const height =  window.innerHeight
+      const width =  window.innerWidth
+      console.log(height)
+      console.log(width)
+    </script> -->
+
+    <style>
+        body{
+            background-color: white;
+            color: grey;
+            transition: background-color 2s, color 3s;
+        }
+
+        .toggleColor {
+            background-color: grey;
+            color: white;
+        }
+    
+    </style>
+    <script>
+        const toggleBackground = () => {
+            document.body.classList.toggle('toggleColor')
+        }
+    </script>
+</head>
+<body>
+
+
+    <button onclick="toggleBackground()">Change Mode</button>
+    <h2>What Can JavaScript Do?</h2>
+
+    <p id="demo">JavaScript can change HTML content.</p>
+    
+    <button type="button" onclick='document.getElementById("demo").innerHTML = "Hello JavaScript!"'>Click Me!</button>
+    
+    
+
+    <h1 id="change">This will change to another thing</h1>
+    <button type="button" onclick='document.getElementById("change").innerHTML = "You are crazy mf"'>Click me</button>
+
+
+
+</body>
+</html>

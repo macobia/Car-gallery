@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <ul id="menu">
+        <li class="menu-item">Home</li>
+        <li class="menu-item">About Us</li>
+        <li class="menu-item">Contact</li>
+    </ul>
+
+    <h1 class="main" id="text">Javascript</h1>
+    <h1 class="text"></h1>
+    <h1 class="text"></h1>
+
+    <input type="text" name="gender" value="male" placeholder="goat" id="name">
+    <!-- <input type="text" name="gender" value="female"> -->
+     <br>
+<!-- 
+    <button id="btn" type="submit" onclick="console.log(greeetClass())">Click me</button> -->
+    
+    <button id="btn" type="submit" onclick="">Click me</button>
+
+    <h1 id="content" > Hello World</h1>
+    <button id="changeContentBtn">Change content</button> <br>
+
+    <!-- <input type="text " value="" id="submitInput">
+    <button type="submit" onclick="sayHello()"></button>
+ -->
+
+
+
+    <script>
+
+       // Event Listener                      //started at html line 24                     very important     
+
+
+        // const greeetClass = () => {
+        //     alert('good morning Class')                        // html line of 24
+        // }
+
+        // const greeetClass = document.getElementById('btn')   //using event listener to display alert
+        // greeetClass.addEventListener('click', function(){
+        //     alert('good morning class')
+        // })
+
+        // const greeetClass = document.getElementById('btn')    //another way of achieving same thing 
+        // greeetClass.onclick = function(){
+        //     alert('good morning class again')
+        // }
+
+        // const changeContent = document.getElementById('changeContentBtn')
+        // changeContent.addEventListener('click', function(){
+        //     changeH1 = document.getElementById('content')
+        //     changeH1.innerHTML = '<h2> Content Changed</h2> <p>  This is a new content</p>'     //This will change the html value to another
+        //     changeH1.style.cssText = "color: green; font-size;" 
+        // })
+
+
+        // function sayHello(){
+        //     const inputVal = document.getElementById('submitInput').value
+        //      alert('Hello ' + inputVal)   }
+
+        
+
+
+        // const element = document.getElementById('text')
+        // console.log(element)
+        // const elements = document.getElementsByName('text')
+        // console.log(elements)
+        // const elements = document.getElementByTagName('input')
+        // console.log(elements)
+        // const elements = document.getElementsByClassName('text')
+        // console.log(elements)
+        // const elements = document.querySelectorAll('.text')
+        // console.log(elements)
+        
+
+        // const parentElements = document.querySelector('.menu-item')      //getting parent node from child
+        // console.log(parentElements.parentElement)
+
+        
+        const childElements = document.querySelector('#menu')      //getting child node from parent
+        console.log(childElements.children)
+
+        // Innerhtml
+        // const element = document.querySelector('#text')
+        // element.innerHTML = '<h1>Hello</h1>'                                 //changed or modified the text content of an element
+        // element.textContent = 'hello'
+
+        // Append
+        // const newElement = document.createElement('div')
+        // newElement.textContent = 'Good morning'                            //create a div and add a text into it
+        // document.body.append(newElement)
+
+
+        // const newElement = document.createElement('div')
+        // newElement.innerHTML = '<p>Good morning</p>'                            //create a div and add another element into it
+        // newElement.className = 'title'                                           //Adds an attribute like classname or id
+        // console.log(newElement)
+
+        // // Adding and removing Element 
+        // const removeElement = document.getElementById('menu')                   //removes the element
+        // removeElement.remove()
+
+        // const removeElement = document.getElementById('menu')                   //removes the first element child and lastelementchild also works
+        // removeElement.removeChild(removeElement.firstElementChild)
+
+        // const addElement = document.getElementById('menu')
+        // const results = document.createElement('li')
+        // results.textContent = 'Services'
+        // results.className = 'menu-item'                                             //adds services to the menu and class to it
+        // addElement.insertBefore(results, addElement.lastElementChild)
+
+        // const addElement = document.getElementById('menu')
+        // const results = document.createElement('li')
+        // results.textContent = 'Services'
+        // results.className = 'menu-item' 
+        // addElement.appendChild(results)                                            //adds services to the menu and class to it using Apen
+
+        // ATTRIBUTES METHOD
+
+        // const element = document.getElementById('name')                            //getting attributes
+        // console.log(element.getAttribute('name'))
+
+        
+        // const element = document.getElementById('name')                            //setting attributes while removeAttribute
+        // element.setAttribute('name', 'sub')
+        // console.log(element)
+ 
+        // element = document.querySelector('#text')
+        // // element.style.color = 'green'                                              //adds color to text
+        // element.style.cssText += 'background-color: black; color: white'             //+ sign adds both the original html styling to the dom styling
+
+        // const getClass = document.querySelector('#text')                                   
+        // console.log(getClass.className)                                                    //checks for the classname
+
+        // const getClass = document.querySelector('#text')                                   //Adds new class
+        // getClass.className += ' new'                                   
+        // console.log(getClass) 
+        
+        // const getClass = document.querySelector('#text')                                   //Adds new class   .remove will remove class
+        // getClass.classList.add('one', 'two')                                 
+        // console.log(getClass) 
+
+        const element = document.querySelector('#text')
+        element.classList.toggle('sub-main')
+        console.log(element)
+
+
+        // Event Listener
+
+   </script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency converter</title>
+</head>
+
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f4f4f4;
+    }
+
+    .converter{
+        padding: 20px;
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        
+    } 
+    .converter input, select, button{
+        margin: 10px 0;
+        padding: 10px;
+        width: 100%;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+
+    }
+</style>
+<body>
+    <div class="converter">
+        <h2>Currency converter</h2>
+        <input type="number" id="amount" placeholder="Amount">
+        <select name="" id="fromCurrency">
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+            <option value="NAIRA">NAIRA</option>
+        </select>
+        <select name="" id="toCurrency">
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+            <option value="NAIRA">NAIRA</option>
+        </select>
+        <button onclick="convert()">Convert</button>
+        <h3 id="result"></h3>
+    </div>
+
+    <script>
+        const exchangeRate = { USD: 1, EUR: 0.92, NAIRA: 1635.19 };
+
+        const convert = () => {
+            let amount = document.getElementById('amount').value ;
+            let fromCurrency = document.getElementById('fromCurrency').value;
+            let toCurrency = document.getElementById('toCurrency').value;
+
+            let result = (amount / exchangeRate[fromCurrency]) * exchangeRate[toCurrency];
+
+            document.getElementById('result').textContent = `Converted Amount: ${result.toFixed(2)} ${toCurrency} `
+        }
+
+    </script>
+
+
+</body>
+</html>

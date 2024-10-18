@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>What Can JavaScript Do?</h2>
+
+<p>JavaScript can change HTML attribute values.</p>
+
+<p>In this case JavaScript changes the value of the src (source) attribute of an image.</p>
+
+<button onclick="document.getElementById('myImage').src='pic_bulbon.gif'">Turn on the light</button>
+
+<img id="myImage" src="pic_bulboff.gif" style="width:100px">
+
+<button onclick="document.getElementById('myImage').src='pic_bulboff.gif'">Turn off the light</button>
+<script>
+    console.clear()
+
+    const randomColor = () =>{
+        const hexCode = '123456789ABCDEF'
+        let colorHash = '#'
+        for(let i = 0; i<6; i++){
+            colorHash += hexCode[Math.floor(Math.random() * 16)]
+        }
+        return colorHash;
+    }
+
+    setInterval(()=>{
+        document.body.style.backgroundColor = randomColor()
+    },1000)
+    
+    // TO REDIRECT users to a different website and the user won't return to the current page by clicking back 
+    // window.location.replace("https://macobia.github.io/Chiefsports-Blog/")
+
+    // redirect user to different page
+    // window.location.href = 'https://google.com';
+
+    // to keep the website on reload
+    // window.location.reload()
+
+
+    // console.log(7 + '7' == '7' + 7)
+    
+
+// let scores = 3;
+// let increment = () => scores++ ;
+// let results = increment === scores;
+// console.log(results);
+
+// close current window
+window.open();
+
+console.log(true == 'true')
+console.log(parseInt(0.0000008))
+
+
+let score = 3
+let increment = () => score++;
+let results = increment() === score;
+console.log(results)
+
+console.log(undefined + false)
+console.log(!5 + !5)
+
+var red = 1998
+console.log(red + 1)
+console.log(76%9)
+console.log(true + false)
+
+console.log(018 - 014);
+
+function Person (firstName, secondName) {
+    this.firstName = firstName;
+    this.secondname = secondName;
+}
+
+let john = new Person('john', 'obi') 
+let peter = new Person('Peter', 'Obi')
+let james = new Person('James', 'Obi')
+
+console.table([john, peter, james])
+console.table([john, peter, james], ['secondName'])
+</script>
+
+
+
+</body>
+</html>
